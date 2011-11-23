@@ -28,7 +28,7 @@ $query = "
         `st_address` text NOT NULL default '',
         `st_phone` varchar(255) NOT NULL default '',
         `st_website` varchar(255) NOT NULL default '',
-        `st_category` ENUM('Bars & restaurants','Fine wine','Grocery') NOT NULL default 1,
+        `st_category` ENUM('Bars & restaurants','Fine wine','Grocery') NOT NULL default 'Bars & restaurants',
         `st_order` int(11) NOT NULL default 0,
         PRIMARY KEY  (`stockist_id`)
         ) ENGINE=MyISAM;
