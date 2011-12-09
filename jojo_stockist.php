@@ -36,6 +36,7 @@ class Jojo_Plugin_Jojo_stockist extends Jojo_Plugin
         $stockists = Jojo::selectQuery($query);
         
         $smarty->assign('stockists', $stockists);
+        $smarty->assign('content', $this->page['pg_body']);
         $content['content']  = $smarty->fetch('jojo_stockists.tpl');
         return $content;
     }
