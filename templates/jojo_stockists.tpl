@@ -1,5 +1,5 @@
-﻿<div id="stockist">
-	{$content}
+﻿{if $content}{$content} 
+{/if}<div id="stockist">
 	{if $stockists[0]['sc_name']}
 		{$country=$stockists[0]['country_id']}
 		{$region=$stockists[0]['region_id']}
