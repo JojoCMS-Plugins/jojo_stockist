@@ -23,7 +23,7 @@ class Jojo_Plugin_Jojo_stockist extends Jojo_Plugin
         global $smarty;
         $content = array();
         
-        $query = "SELECT * FROM stockist s LEFT JOIN stockist_region t ON (s.region_id = t.region_id) LEFT JOIN stockist_country u ON (t.country_id = u.country_id) ORDER BY u.sc_order,u.sc_name, t.sr_order,t.sr_name, s.st_category,s.st_order,s.st_name";
+        $query = "SELECT * FROM {stockist} s LEFT JOIN {stockist_region} t ON (s.region_id = t.region_id) LEFT JOIN {stockist_country} u ON (t.country_id = u.country_id) ORDER BY u.sc_order,u.sc_name, t.sr_order,t.sr_name, s.st_category,s.st_order,s.st_name";
         $stockists = Jojo::selectQuery($query);
         
         $smarty->assign('stockists', $stockists);
