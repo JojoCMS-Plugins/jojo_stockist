@@ -65,7 +65,6 @@ $default_fd[$table][$field] = array(
         'fd_mode' => "advanced",
     );
 
-// stockist id Field
 $field = 'st_phone';
 $default_fd[$table][$field] = array(
         'fd_name' => "Phone",
@@ -76,6 +75,35 @@ $default_fd[$table][$field] = array(
         'fd_mode' => "advanced",
     );
 
+$field = 'st_fax';
+$default_fd[$table][$field] = array(
+        'fd_name' => "Fax",
+        'fd_type' => "text",
+        'fd_help' => "The fax number of the stockist",
+        'fd_order' => $o++,
+        'fd_tabname' => "Content",
+        'fd_mode' => "advanced",
+    );
+
+$field = 'st_contact';
+$default_fd[$table][$field] = array(
+        'fd_name' => "Contact Name",
+        'fd_type' => "text",
+        'fd_help' => "A contact name at the stockists",
+        'fd_order' => $o++,
+        'fd_tabname' => "Content",
+        'fd_mode' => "advanced",
+    );
+
+$field = 'st_email';
+$default_fd[$table][$field] = array(
+        'fd_name' => "Email",
+        'fd_type' => "text",
+        'fd_help' => "The email of the stockist",
+        'fd_order' => $o++,
+        'fd_tabname' => "Content",
+        'fd_mode' => "advanced",
+    );
 // stockist id Field
 $field = 'st_website';
 $default_fd[$table][$field] = array(
@@ -92,9 +120,9 @@ $field = 'st_category';
 $default_fd[$table][$field]['fd_order'] = $o++;
 $default_fd[$table][$field]['fd_name'] = 'Category';
 $default_fd[$table][$field]['fd_type'] = 'radio';
-$default_fd[$table][$field]['fd_options'] = 'Bars & restaurants:Bars & restaurants
-Fine wine:Fine wine
-Grocery:Grocery';
+$default_fd[$table][$field]['fd_options'] = 'Bars & restaurants:Retail Store
+Fine wine:Distributor
+Grocery:Reseller';
 $default_fd[$table][$field]['fd_size'] = '20';
 $default_fd[$table][$field]['fd_help'] = 'Default value of the right scale.';
 $default_fd[$table][$field]['fd_tabname'] = 'Content';
