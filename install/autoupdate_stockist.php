@@ -6,6 +6,7 @@ $default_td['stockist'] = array(
         'td_displayfield' => "st_name",
         'td_filter' => "yes",
         'td_topsubmit' => "yes",
+        'td_orderbyfields' => "st_order, st_name",
         'td_addsimilar' => "no",
         'td_deleteoption' => "yes",
         'td_menutype' => "list",
