@@ -36,6 +36,8 @@ class Jojo_Plugin_Jojo_stockist extends Jojo_Plugin
         $stockists = Jojo::selectQuery($query);
         foreach ($stockists as &$s) {
             $s['st_address'] = trim(nl2br(htmlspecialchars($s['st_address'], ENT_COMPAT, 'UTF-8', false)));
+            $s['st_website_display'] = trim($s['st_website'], 'http://');
+            $s['st_website'] = $s['st_website'] && strpos($s['st_website'], 'http://')===false ? 'http://' . $s['st_website'] : $s['st_website'];
         }
         return $stockists;
     }

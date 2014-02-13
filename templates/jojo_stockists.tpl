@@ -31,7 +31,7 @@
                 {/if}{if $stockist.st_phone}<span>Phone: </span>{$stockist.st_phone}<br/>
                 {/if}{if $stockist.st_fax}<span>Fax: </span>{$stockist.st_fax}<br />
                 {/if}{if $stockist.st_email}<a href="mailto:{$stockist.st_email}">{$stockist.st_email}</a>
-                {/if}{if $stockist.st_website}<a href="{$stockist.st_website}">{$stockist.st_website}</a>
+                {/if}{if $stockist.st_website}<a href="{$stockist.st_website}">{$stockist.st_website_display}</a>
                 {/if}</p>
             </div>
 {/foreach}
