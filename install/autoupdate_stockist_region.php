@@ -4,13 +4,15 @@ $default_td['stockist_region'] = array(
         'td_name' => "stockist_region",
         'td_primarykey' => "region_id",
         'td_displayfield' => "sr_name",
+        'td_parentfield' => "region_parentid",
         'td_displayname' => "Region",
+        'td_orderbyfields' => "sr_order, sr_name",
         'td_filter' => "yes",
         'td_topsubmit' => "yes",
         'td_addsimilar' => "no",
         'td_deleteoption' => "yes",
         'td_menutype' => "list",
-        'td_help' => "News Article Categories are managed from here.",
+        'td_help' => "",
         'td_plugin' => "Jojo_Stockist",
     );
 
@@ -44,6 +46,19 @@ $default_fd[$table][$field] = array(
         'fd_mode' => "advanced",
     );
 
+// Region parent Field
+$field = 'region_parentid';
+$default_fd[$table][$field] = array(
+        'fd_name' => "Parent Region",
+        'fd_type' => "dblist",
+        'fd_options' => "stockist_region",
+        'fd_help' => "Don't set regions to be parents of themselves!",
+        'fd_order' => $o++,
+        'fd_tabname' => "Content",
+        'fd_mode' => "advanced",
+    );
+
+
 // stockist id Field
 $field = 'country_id';
 $default_fd[$table][$field] = array(
@@ -60,7 +75,7 @@ $default_fd[$table][$field] = array(
 $field = 'sr_order';
 $default_fd[$table][$field] = array(
         'fd_name' => "Order",
-        'fd_type' => "integer",
+        'fd_type' => "order",
         'fd_order' => $o++,
         'fd_tabname' => "Content",
         'fd_mode' => "advanced",

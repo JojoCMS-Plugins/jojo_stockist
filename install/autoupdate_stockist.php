@@ -9,7 +9,7 @@ $default_td['stockist'] = array(
         'td_orderbyfields' => "st_order, st_name",
         'td_addsimilar' => "no",
         'td_deleteoption' => "yes",
-        'td_menutype' => "list",
+        'td_menutype' => "searchabletree",
         'td_help' => "Stockists are managed from here.",
         'td_plugin' => "Jojo_Stockist",
     );

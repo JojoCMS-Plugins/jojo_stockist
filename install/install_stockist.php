@@ -58,6 +58,7 @@ $table = 'stockist_region';
 $query = "
 CREATE TABLE {stockist_region} (
 	`region_id` int(11) NOT NULL auto_increment,
+	`region_parentid` int(11) NOT NULL default '0',
 	`country_id` int(11) NOT NULL default '0',
 	`sr_name` varchar(255) NOT NULL default '',
 	`sr_order` int(11) NOT NULL default '0',
