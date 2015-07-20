@@ -23,7 +23,6 @@ if (!count($data)) {
     Jojo::insertQuery("INSERT INTO {page} SET pg_title='Stockists', pg_status='hidden', pg_link='Jojo_Plugin_Jojo_stockist', pg_url='stockists'");
     $parent = Jojo::insertQuery("INSERT INTO {page} SET pg_title='Edit Stockists', pg_link='jojo_plugin_admin_edit', pg_url='admin/edit/stockist'");
     Jojo::insertQuery("INSERT INTO {page} SET pg_title='Edit Regions', pg_link='jojo_plugin_admin_edit', pg_url='admin/edit/stockist_region', pg_parent='".$parent."'");
-    Jojo::insertQuery("INSERT INTO {page} SET pg_title='Edit Countries', pg_link='jojo_plugin_admin_edit', pg_url='admin/edit/stockist_country', pg_parent='".$parent."'");
 }
 
 //Add to CONTENT tab (this required for admin pages only)

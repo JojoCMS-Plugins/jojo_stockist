@@ -59,7 +59,6 @@ $query = "
 CREATE TABLE {stockist_region} (
 	`region_id` int(11) NOT NULL auto_increment,
 	`region_parentid` int(11) NOT NULL default '0',
-	`country_id` int(11) NOT NULL default '0',
 	`sr_name` varchar(255) NOT NULL default '',
 	`sr_order` int(11) NOT NULL default '0',
 	PRIMARY KEY (`region_id`)
@@ -81,33 +80,5 @@ if (isset($result['added'])) {
 }
 
 if (isset($result['different'])) Jojo::printTableDifference($table, $result['different']);
-
-
-$table = 'stockist_country';
-$query = "
-CREATE TABLE {stockist_country} (
-	`country_id` int(11) NOT NULL auto_increment,
-	`sc_name` varchar(255) NOT NULL default '',
-	`sc_order` int(11) NOT NULL default '0',
-	PRIMARY KEY (`country_id`)
-	) ENGINE=MyISAM;
-";
-
-/* Check table structure */
-$result = Jojo::checkTable($table, $query);
-
-/* Output result */
-if (isset($result['created'])) {
-    echo sprintf("jojo_stockist_country: Table <b>%s</b> Does not exist - created empty table.<br />", $table);
-}
-
-if (isset($result['added'])) {
-    foreach ($result['added'] as $col => $v) {
-        echo sprintf("jojo_stockist_country: Table <b>%s</b> column <b>%s</b> Does not exist - added.<br />", $table, $col);
-    }
-}
-
-if (isset($result['different'])) Jojo::printTableDifference($table, $result['different']);
-
 
 

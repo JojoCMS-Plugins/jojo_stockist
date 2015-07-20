@@ -7,9 +7,11 @@ $default_td['stockist'] = array(
         'td_filter' => "yes",
         'td_topsubmit' => "yes",
         'td_orderbyfields' => "st_order, st_name",
-        'td_addsimilar' => "no",
+        'td_addsimilar' => "yes",
         'td_deleteoption' => "yes",
         'td_menutype' => "searchabletree",
+        'td_categorytable' => "stockist_region",
+        'td_categoryfield' => "region_id",
         'td_help' => "Stockists are managed from here.",
         'td_plugin' => "Jojo_Stockist",
     );

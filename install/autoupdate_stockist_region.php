@@ -58,19 +58,6 @@ $default_fd[$table][$field] = array(
         'fd_mode' => "advanced",
     );
 
-
-// stockist id Field
-$field = 'country_id';
-$default_fd[$table][$field] = array(
-        'fd_name' => "Country",
-        'fd_type' => "dblist",
-        'fd_options' => "stockist_country",
-        'fd_help' => "A unique ID, automatically assigned by the system",
-        'fd_order' => $o++,
-        'fd_tabname' => "Content",
-        'fd_mode' => "advanced",
-    );
-
 // stockist id Field
 $field = 'sr_order';
 $default_fd[$table][$field] = array(
